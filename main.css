@@ -24,7 +24,7 @@ body {
     align-items: center;
     height: 100vh;
     background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
-    backdrop-filter: blur(10px); /* Glass blur effect */
+    backdrop-filter: blur(2px); /* Glass blur effect */
     color: #ffffff;
     text-align: center;
     padding: 20px;
