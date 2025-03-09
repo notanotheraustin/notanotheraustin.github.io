@@ -1,35 +1,32 @@
-console.log("Hello, JS is running!");
+console.log("Particles.js is running!");
 
-// Particle Background Effect
+// Initialize particles with attraction effect
 particlesJS("particles-js", {
-    "particles": {
-        "number": { "value": 100, "density": { "enable": true, "value_area": 800 } },
-        "color": { "value": "#00ffff" },
-        "shape": { "type": "circle" },
-        "opacity": { "value": 0.5, "random": false },
-        "size": { "value": 3, "random": true },
-        "line_linked": { "enable": true, "distance": 150, "color": "#00ffff", "opacity": 0.4, "width": 1 },
-        "move": { 
-            "enable": true,
-            "speed": 3,
-            "direction": "none",
-            "random": false,
-            "straight": false
+    particles: {
+        number: { value: 100, density: { enable: true, value_area: 800 } },
+        color: { value: "#00ffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5, random: false },
+        size: { value: 3, random: true },
+        line_linked: { enable: true, distance: 150, color: "#00ffff", opacity: 0.4, width: 1 },
+        move: {
+            enable: true,
+            speed: 3,
+            direction: "none",
+            random: false,
+            straight: false
         }
     },
-    "interactivity": {
-        "detect_on": "canvas", // Ensure detection is on canvas
-        "events": { 
-            "onhover": { 
-                "enable": true, 
-                "mode": "attract"  // Enable the attract mode
-            }
+    interactivity: {
+        detect_on: "canvas",
+        events: {
+            onhover: { enable: true, mode: "attract" }
         },
-        "modes": { 
-            "attract": { 
-                "distance": 200,  // Controls the attract range
-                "duration": 0.4,  // Attraction duration
-                "speed": 2        // Attraction speed
+        modes: {
+            attract: {
+                distance: 200,
+                duration: 0.4,
+                speed: 2
             }
         }
     }
