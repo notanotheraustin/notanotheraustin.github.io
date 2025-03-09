@@ -1,3 +1,5 @@
+console.log ("Hello RUNNING JS HERE I AM FUCKING RUNNING LOOK AT MEEEEE");
+
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 let interval = null;
