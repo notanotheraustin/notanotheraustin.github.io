@@ -1,11 +1,13 @@
 /* Cyberpunk Style */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
 body {
     display: grid;
     place-items: center;
     height: 100vh;
     background-color: black;
     margin: 0;
-    font-family: 'Space Mono', monospace;
+    font-family: 'Orbitron', sans-serif;
     overflow: hidden;
 }
 
