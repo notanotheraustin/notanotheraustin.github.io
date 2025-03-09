@@ -5,8 +5,8 @@ body {
     height: 100vh;
     background-color: black;
     margin: 0;
-    overflow: hidden;
     font-family: 'Space Mono', monospace;
+    overflow: hidden;
 }
 
 /* Particle Background */
@@ -17,42 +17,53 @@ body {
     z-index: -1;
 }
 
-/* Title Styling */
-h1 {
-    font-size: clamp(3rem, 10vw, 10rem);
-    color: cyan;
-    padding: 0rem clamp(1rem, 2vw, 3rem);
-    border-radius: clamp(0.4rem, 0.75vw, 1rem);
-    text-shadow: 0 0 10px cyan, 0 0 20px blue;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
+/* Header Section */
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #1a1a2e, #16213e, #0f3460);
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    flex-direction: column;
+    font-size: 1.5rem;
+    overflow: hidden;
 }
 
-h1:hover {
+#header h1 {
+    font-size: clamp(4rem, 10vw, 8rem);
     color: cyan;
-    text-shadow: 0 0 15px cyan, 0 0 30px blue;
+    text-shadow: 0 0 10px cyan, 0 0 30px blue;
+    margin-bottom: 10px;
 }
 
-/* Meta Links */
-.meta-link {
-    position: fixed;
-    bottom: 10px;
-    left: 10px;
-    padding: 10px 20px;
-    border-radius: 6px;
-    background-color: rgba(0, 255, 255, 0.1);
-    border: 1px solid rgba(0, 255, 255, 0.5);
-    color: white;
+#header p {
+    font-size: 1.5rem;
+    color: #e6e6e6;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    background-color: cyan;
+    color: #0f3460;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
     text-decoration: none;
-    font-family: "Rubik", sans-serif;
-    transition: background 0.3s ease, border-color 0.3s ease;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
-.meta-link:hover {
-    background: rgba(0, 255, 255, 0.3);
-    border-color: cyan;
+.cta-button:hover {
+    background-color: #00e6e6;
+    transform: translateY(-5px);
 }
 
-/* Custom Cursor (Optional, can be enabled later) */
-body {
-    cursor: url('cursor.png'), auto;
+/* Ensure smooth scrolling */
+html {
+    scroll-behavior: smooth;
 }
