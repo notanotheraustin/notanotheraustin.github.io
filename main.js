@@ -18,26 +18,18 @@ particlesJS("particles-js", {
         }
     },
     "interactivity": {
-        "detect_on": "canvas",
+        "detect_on": "canvas", // Ensure detection is on canvas
         "events": { 
             "onhover": { 
                 "enable": true, 
-                "mode": "attract"  // Using the attract mode here
-            },
-            "onclick": { "enable": true, "mode": "push" }
+                "mode": "attract"  // Enable the attract mode
+            }
         },
         "modes": { 
             "attract": { 
-                "distance": 200,  // Distance of attraction around the cursor
-                "duration": 0.4,  // Duration of attraction
-                "speed": 3        // Speed of attraction
-            },
-            "repulse": { 
-                "distance": 100, 
-                "duration": 0.4 
-            },
-            "push": { 
-                "particles_nb": 4 
+                "distance": 200,  // Controls the attract range
+                "duration": 0.4,  // Attraction duration
+                "speed": 2        // Attraction speed
             }
         }
     }
