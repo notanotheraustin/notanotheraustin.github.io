@@ -9,7 +9,7 @@
 </head>
 <body>
     <!-- Invisible Bandcamp Embed -->
-    <iframe src="https://bandcamp.com/EmbeddedPlayer/album=1013931699/size=small/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/" 
+    <iframe src="https://bandcamp.com/EmbeddedPlayer/track=1234567890/size=large/bgcol=000000/linkcol=ffffff/tracklist=false/transparent=true" 
             seamless
             id="bandcamp-player"></iframe>
 
@@ -22,25 +22,5 @@
     </main>
 
     <script src="main.js"></script>
-
-    <style>
-        /* Hide the Bandcamp Player */
-        #bandcamp-player {
-            position: absolute;
-            width: 0;
-            height: 0;
-            opacity: 0;
-            pointer-events: none;
-        }
-    </style>
-
-    <script>
-        // Add event listener to trigger autoplay after any user interaction (click on the page)
-        document.body.addEventListener('click', function() {
-            var iframe = document.getElementById('bandcamp-player');
-            var src = iframe.src;
-            iframe.src = src + "&autoplay=1"; // Add autoplay parameter after the user clicks
-        });
-    </script>
 </body>
-</ht
+</html>
