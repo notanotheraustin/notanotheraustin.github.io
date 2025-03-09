@@ -14,23 +14,31 @@ particlesJS("particles-js", {
             "speed": 3,
             "direction": "none",
             "random": false,
-            "straight": false,
-            "attract": {
-                "enable": true,
-                "rotateX": 600,
-                "rotateY": 600
-            }
+            "straight": false
         }
     },
     "interactivity": {
         "detect_on": "canvas",
         "events": { 
-            "onhover": { "enable": true, "mode": "repulse" },
+            "onhover": { 
+                "enable": true, 
+                "mode": "attract"  // Using the attract mode here
+            },
             "onclick": { "enable": true, "mode": "push" }
         },
         "modes": { 
-            "repulse": { "distance": 100, "duration": 0.4 }, 
-            "push": { "particles_nb": 4 }
+            "attract": { 
+                "distance": 200,  // Distance of attraction around the cursor
+                "duration": 0.4,  // Duration of attraction
+                "speed": 3        // Speed of attraction
+            },
+            "repulse": { 
+                "distance": 100, 
+                "duration": 0.4 
+            },
+            "push": { 
+                "particles_nb": 4 
+            }
         }
     }
 });
