@@ -23,15 +23,31 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(45deg, #1a1a2e, #16213e, #0f3460);
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Glass blur effect */
     color: #ffffff;
     text-align: center;
     padding: 20px;
     flex-direction: column;
     font-size: 1.5rem;
     overflow: hidden;
+    border-radius: 15px; /* Optional, rounded corners for the glass effect */
 }
 
+/* Glass-like gradient with transparency */
+#header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.3));
+    border-radius: 15px;
+    z-index: -1;
+}
+
+/* Header text */
 #header h1 {
     font-size: clamp(4rem, 10vw, 8rem);
     color: cyan;
