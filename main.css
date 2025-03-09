@@ -28,9 +28,8 @@ h1 {
 }
 
 h1:hover {
-    color: black;
-    background-color: cyan;
-    text-shadow: none;
+    color: cyan;
+    text-shadow: 0 0 15px cyan, 0 0 30px blue;
 }
 
 /* Meta Links */
