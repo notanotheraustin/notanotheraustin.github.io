@@ -9,12 +9,29 @@ particlesJS("particles-js", {
         "opacity": { "value": 0.5, "random": false },
         "size": { "value": 3, "random": true },
         "line_linked": { "enable": true, "distance": 150, "color": "#00ffff", "opacity": 0.4, "width": 1 },
-        "move": { "enable": true, "speed": 3, "direction": "none", "random": false, "straight": false }
+        "move": { 
+            "enable": true,
+            "speed": 3,
+            "direction": "none",
+            "random": false,
+            "straight": false,
+            "attract": {
+                "enable": true,
+                "rotateX": 600,
+                "rotateY": 600
+            }
+        }
     },
     "interactivity": {
         "detect_on": "canvas",
-        "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": true, "mode": "push" } },
-        "modes": { "repulse": { "distance": 100, "duration": 0.4 }, "push": { "particles_nb": 4 } }
+        "events": { 
+            "onhover": { "enable": true, "mode": "repulse" },
+            "onclick": { "enable": true, "mode": "push" }
+        },
+        "modes": { 
+            "repulse": { "distance": 100, "duration": 0.4 }, 
+            "push": { "particles_nb": 4 }
+        }
     }
 });
 
