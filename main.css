@@ -55,6 +55,7 @@ body {
     color: cyan;
     text-shadow: 0 0 10px cyan, 0 0 30px blue;
     margin-bottom: 10px;
+    font-weight: 400; /* Ensure normal weight instead of bold */
 }
 
 #header p {
@@ -206,8 +207,4 @@ html {
     color: #fff;
     opacity: 0.8;
     margin-top: 10px;
-}
-
-html {
-    scroll-behavior: smooth;
 }
