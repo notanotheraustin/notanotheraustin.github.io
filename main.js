@@ -36,6 +36,30 @@ particlesJS("particles-js", {
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let interval = null;
 
+const GITHUB_USERNAME = "notanotheraustin"; 
+
+async function fetchGitHubRepos() {
+    const response = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated`);
+    const repos = await response.json();
+
+    const repoContainer = document.getElementById("repo-container");
+    repoContainer.innerHTML = ""; // Clear loading text
+
+    repos.forEach(repo => {
+        const repoElement = document.createElement("div");
+        repoElement.classList.add("repo-card");
+        repoElement.innerHTML = `
+            <h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
+            <p>${repo.description || "No description available"}</p>
+        `;
+        repoContainer.appendChild(repoElement);
+    });
+}
+
+// Call the function on page load
+fetchGitHubRepos();
+
+
 document.querySelector("h1").onmouseover = event => {  
     let iteration = 0;
     clearInterval(interval);
