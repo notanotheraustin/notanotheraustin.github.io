@@ -221,26 +221,32 @@ nav a:hover {
     margin-top: 10px; /* Margin above */
 }
 
-/* About Section */
+/* About Section Styling */
 #about {
-    background-color: rgba(0, 0, 0, 0.5); /* Dark background with transparency */
+    background-color: rgba(0, 0, 0, 0.5); /* Dark transparent background */
     color: #fff; /* White text */
-    padding: 50px; /* Padding inside section */
-    text-align: center; /* Center text */
-    font-size: 1.2rem; /* Font size */
+    padding: 50px; /* Padding inside the section */
+    text-align: center; /* Center the text */
+    font-size: 1.2rem; /* Default font size */
 }
 
+/* About Me Heading */
 #about h2 {
-    font-size: 2rem; /* Font size for heading */
-    color: cyan; /* Cyan text */
-    margin-bottom: 20px; /* Margin below heading */
+    font-size: 2.5rem; /* Larger heading */
+    font-family: 'Orbitron', sans-serif; /* Cyberpunk font */
+    color: cyan; /* Neon cyan text */
+    margin-bottom: 20px; /* Space below heading */
+    text-shadow: 0 0 10px cyan, 0 0 20px blue; /* Glow effect */
 }
 
+/* About Me Text */
 #about p {
-    font-size: 1.2rem; /* Font size for paragraph */
-    color: #e6e6e6; /* Light grey text */
-    max-width: 800px; /* Max width for paragraph */
+    font-size: 1.4rem; /* Slightly larger text */
+    color: #e6e6e6; /* Soft white */
+    max-width: 800px; /* Limit width for readability */
     margin: 0 auto; /* Center text */
+    font-family: 'Courier New', monospace; /* Unique hacker-style font */
+    line-height: 1.6; /* Better spacing between lines */
 }
 
 /* Contact Section */
