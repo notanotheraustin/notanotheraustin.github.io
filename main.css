@@ -143,7 +143,7 @@ html {
     margin-top: 20px;
 }
 
-/* Cyberpunk 2077 Inspired Project Card */
+/* Cyberpunk 2077 Inspired Project Card with Glitch Glow Effect */
 .repo-card {
     position: relative;
     background: rgba(0, 0, 0, 0.8);
@@ -156,29 +156,35 @@ html {
     font-family: 'Orbitron', sans-serif;
     transition: 0.3s ease-in-out;
     overflow: hidden;
+    box-shadow: 0 0 10px cyan;
+    animation: glitch-glow 0.8s infinite alternate ease-in-out;
 }
 
-/* Glitchy Polygon Borders */
-.repo-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 2px solid cyan;
-    clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
-    z-index: -1;
-    transition: 0.3s;
-}
-
-.repo-card:hover::before {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%);
+/* Glitchy Glow Animation */
+@keyframes glitch-glow {
+    0% {
+        box-shadow: 0 0 10px cyan, 0 0 20px rgba(0, 255, 255, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 15px cyan, 0 0 30px rgba(0, 255, 255, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 10px cyan, 0 0 20px rgba(0, 255, 255, 0.5);
+    }
 }
 
 .repo-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 15px cyan, 0 0 30px rgba(0, 255, 255, 0.5);
+    animation: glitch-glow-hover 0.2s infinite alternate ease-in-out;
+}
+
+@keyframes glitch-glow-hover {
+    0% {
+        box-shadow: 0 0 20px cyan, 0 0 40px rgba(0, 255, 255, 1);
+    }
+    100% {
+        box-shadow: 0 0 10px cyan, 0 0 20px rgba(0, 255, 255, 0.7);
+    }
 }
 
 /* Title and Link */
