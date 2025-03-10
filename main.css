@@ -1,166 +1,179 @@
-/* Cyberpunk Style */
+/* Cyberpunk Font */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
+/* Basic Body Styles */
 body {
-    display: grid;
-    place-items: center;
-    height: 100vh;
-    background-color: black;
-    margin: 0;
-    font-family: 'Orbitron', sans-serif;
-    overflow: hidden;
+    display: grid; /* Centering content */
+    place-items: center; /* Center content vertically and horizontally */
+    height: 100vh; /* Full viewport height */
+    background-color: black; /* Background color */
+    margin: 0; /* Remove default margin */
+    font-family: 'Orbitron', sans-serif; /* Set custom font */
+    overflow: hidden; /* Prevent overflow */
 }
 
 /* Particle Background */
 #particles-js {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+    position: fixed; /* Fix position on screen */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    z-index: -1; /* Place behind all other content */
 }
 
 /* Header Section */
 #header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    display: flex; /* Flexbox for layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
     background: rgba(0, 0, 0, 0.07); /* Semi-transparent background */
-    backdrop-filter: blur(2px); /* Glass blur effect */
-    color: #ffffff;
-    text-align: center;
+    backdrop-filter: blur(2px); /* Glass effect */
+    color: #ffffff; /* White text */
+    text-align: center; /* Center text */
     padding: 20px;
-    flex-direction: column;
-    font-size: 1.5rem;
-    overflow: hidden;
-    border-radius: 15px; /* Optional, rounded corners for the glass effect */
+    flex-direction: column; /* Stack content vertically */
+    font-size: 1.5rem; /* Default font size */
+    overflow: hidden; /* Prevent content from overflowing */
+    border-radius: 15px; /* Rounded corners */
 }
 
-/* Glass-like gradient with transparency */
+/* Header Gradient Background */
 #header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.3));
-    border-radius: 15px;
-    z-index: -1;
+    content: ''; /* Empty content */
+    position: absolute; /* Absolute positioning */
+    top: 0; left: 0; right: 0; bottom: 0; /* Cover entire section */
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.3)); /* Gradient background */
+    border-radius: 15px; /* Match rounded corners */
+    z-index: -1; /* Place behind content */
 }
 
-/* Header text */
+/* Header Text */
 #header h1 {
-    font-size: clamp(4rem, 10vw, 8rem);
-    color: cyan;
-    text-shadow: 0 0 10px cyan, 0 0 30px blue;
-    margin-bottom: 10px;
-    font-weight: 400; /* Ensure normal weight instead of bold */
+    font-size: clamp(4rem, 10vw, 8rem); /* Responsive font size */
+    color: cyan; /* Cyan color */
+    text-shadow: 0 0 10px cyan, 0 0 30px blue; /* Glowing effect */
+    margin-bottom: 10px; /* Margin below */
+    font-weight: 400; /* Regular font weight */
 }
 
 #header p {
-    font-size: 1.5rem;
-    color: #e6e6e6;
-    margin-bottom: 20px;
+    font-size: 1.5rem; /* Font size for the paragraph */
+    color: #e6e6e6; /* Light grey text */
+    margin-bottom: 20px; /* Space below text */
 }
 
-/* Outlined Button */
+/* Button Styles */
 .cta-button {
-    display: inline-block;
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    color: cyan;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: bold;
-    letter-spacing: 2px;
-    position: relative;
-    border: 2px solid cyan;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out;
-    overflow: hidden;
-    background: none;
+    display: inline-block; /* Inline block */
+    padding: 15px 30px; /* Padding inside button */
+    font-size: 1.2rem; /* Button font size */
+    color: cyan; /* Cyan text */
+    text-transform: uppercase; /* Uppercase text */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text */
+    letter-spacing: 2px; /* Spacing between letters */
+    position: relative; /* Position relative to container */
+    border: 2px solid cyan; /* Cyan border */
+    border-radius: 5px; /* Rounded corners */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+    overflow: hidden; /* Prevent overflow */
+    background: none; /* Transparent background */
 }
 
-/* Neon glow effect */
+/* Button Neon Glow Effect */
 .cta-button::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 255, 255, 0.2);
-    filter: blur(10px);
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    content: ""; /* Empty content */
+    position: absolute; /* Absolute positioning */
+    top: 0; left: 0; width: 100%; height: 100%; /* Cover button */
+    background: rgba(0, 255, 255, 0.2); /* Neon glow */
+    filter: blur(10px); /* Blur effect */
+    opacity: 0; /* Start with opacity 0 */
+    transition: opacity 0.3s ease-in-out; /* Smooth transition */
 }
 
-/* Futuristic animated border effect */
+/* Button Border Animation */
 .cta-button::after {
-    content: "";
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    width: 0;
-    height: 100%;
-    background: cyan;
-    transition: width 0.3s ease-in-out;
-    opacity: 0.2; /* Make background less intense */
+    content: ""; /* Empty content */
+    position: absolute; /* Absolute positioning */
+    top: -2px; left: -2px; width: 0; height: 100%; /* Start with no width */
+    background: cyan; /* Cyan border */
+    transition: width 0.3s ease-in-out; /* Smooth transition for width */
+    opacity: 0.2; /* Less intense background */
 }
 
 .cta-button:hover::after {
-    width: 100%;
-    opacity: 0.5; /* Reduce background intensity */
+    width: 100%; /* Expand to full width on hover */
+    opacity: 0.5; /* Increase opacity */
 }
 
 .cta-button:hover::before {
-    opacity: 1;
+    opacity: 1; /* Show glow effect on hover */
 }
 
 .cta-button:hover {
-    color: black;
-    background: rgba(0, 255, 255, 0.2); /* Semi-transparent cyan */
-    box-shadow: 0 0 15px cyan;
+    color: black; /* Change text color */
+    background: rgba(0, 255, 255, 0.2); /* Semi-transparent cyan background */
+    box-shadow: 0 0 15px cyan; /* Glowing effect */
 }
 
-/* Ensure smooth scrolling */
+/* Smooth Scrolling */
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+/* Navigation Bar */
+nav ul {
+    list-style: none; /* Remove default list style */
+    padding: 0; /* Remove padding */
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center horizontally */
+    gap: 20px; /* Space between items */
+    margin: 20px 0; /* Space above and below */
+}
+
+nav a {
+    color: cyan; /* Cyan text */
+    text-decoration: none; /* Remove underline */
+    font-size: 1.2rem; /* Font size */
+}
+
+nav a:hover {
+    text-decoration: underline; /* Underline on hover */
 }
 
 /* Projects Section */
 #projects {
-    text-align: center;
-    padding: 50px;
-    color: #fff;
+    text-align: center; /* Center text */
+    padding: 50px; /* Padding inside section */
+    color: #fff; /* White text */
 }
 
 #repo-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
+    display: flex; /* Flexbox layout */
+    flex-wrap: wrap; /* Wrap items */
+    justify-content: center; /* Center items */
+    gap: 20px; /* Space between cards */
+    margin-top: 20px; /* Margin above */
 }
 
+/* Repo Card */
 .repo-card {
-    position: relative;
-    background: rgba(0, 0, 0, 0.8);
-    border: 2px solid cyan;
-    padding: 20px;
-    width: 320px;
-    border-radius: 5px;
-    text-align: left;
-    color: #0ff;
-    font-family: 'Orbitron', sans-serif;
-    transition: 0.3s ease-in-out;
-    overflow: hidden;
-    box-shadow: 0 0 10px cyan;
-    animation: glitch-glow 0.8s infinite alternate ease-in-out;
+    position: relative; /* Relative positioning */
+    background: rgba(0, 0, 0, 0.8); /* Dark background */
+    border: 2px solid cyan; /* Cyan border */
+    padding: 20px; /* Padding inside card */
+    width: 320px; /* Set width */
+    border-radius: 5px; /* Rounded corners */
+    text-align: left; /* Align text left */
+    color: #0ff; /* Cyan text */
+    font-family: 'Orbitron', sans-serif; /* Font */
+    transition: 0.3s ease-in-out; /* Smooth transition */
+    overflow: hidden; /* Prevent overflow */
+    box-shadow: 0 0 10px cyan; /* Glowing effect */
+    animation: glitch-glow 0.8s infinite alternate ease-in-out; /* Glitch animation */
 }
 
-/* Glitchy Glow Animation */
+/* Glitch Glow Animation */
 @keyframes glitch-glow {
     0% {
         box-shadow: 0 0 10px cyan, 0 0 20px rgba(0, 255, 255, 0.5);
@@ -174,8 +187,8 @@ html {
 }
 
 .repo-card:hover {
-    transform: translateY(-5px);
-    animation: glitch-glow-hover 0.2s infinite alternate ease-in-out;
+    transform: translateY(-5px); /* Hover effect to move card */
+    animation: glitch-glow-hover 0.2s infinite alternate ease-in-out; /* Glitch effect */
 }
 
 @keyframes glitch-glow-hover {
@@ -187,90 +200,91 @@ html {
     }
 }
 
-/* Title and Link */
+/* Repo Title and Link */
 .repo-card h3 a {
-    color: #ffcc00;
-    text-decoration: none;
-    font-size: 1.4rem;
-    transition: 0.3s;
+    color: #ffcc00; /* Yellow text */
+    text-decoration: none; /* Remove underline */
+    font-size: 1.4rem; /* Font size */
+    transition: 0.3s; /* Smooth transition */
 }
 
 .repo-card h3 a:hover {
-    color: cyan;
-    text-shadow: 0 0 10px cyan, 0 0 20px cyan;
+    color: cyan; /* Change to cyan on hover */
+    text-shadow: 0 0 10px cyan, 0 0 20px cyan; /* Glow effect */
 }
 
 /* Repo Description */
 .repo-card p {
-    font-size: 1rem;
-    color: #fff;
-    opacity: 0.8;
-    margin-top: 10px;
+    font-size: 1rem; /* Font size */
+    color: #fff; /* White text */
+    opacity: 0.8; /* Slight transparency */
+    margin-top: 10px; /* Margin above */
 }
 
 /* About Section */
 #about {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    padding: 50px;
-    text-align: center;
-    font-size: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark background with transparency */
+    color: #fff; /* White text */
+    padding: 50px; /* Padding inside section */
+    text-align: center; /* Center text */
+    font-size: 1.2rem; /* Font size */
 }
 
 #about h2 {
-    font-size: 2rem;
-    color: cyan;
-    margin-bottom: 20px;
+    font-size: 2rem; /* Font size for heading */
+    color: cyan; /* Cyan text */
+    margin-bottom: 20px; /* Margin below heading */
 }
 
 #about p {
-    font-size: 1.2rem;
-    color: #e6e6e6;
-    max-width: 800px;
-    margin: 0 auto;
+    font-size: 1.2rem; /* Font size for paragraph */
+    color: #e6e6e6; /* Light grey text */
+    max-width: 800px; /* Max width for paragraph */
+    margin: 0 auto; /* Center text */
 }
 
 /* Contact Section */
 #contact {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    padding: 50px;
-    text-align: center;
-    font-size: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark background with transparency */
+    color: #fff; /* White text */
+    padding: 50px; /* Padding inside section */
+    text-align: center; /* Center text */
+    font-size: 1.2rem; /* Font size */
 }
 
 #contact h2 {
-    font-size: 2rem;
-    color: cyan;
-    margin-bottom: 20px;
+    font-size: 2rem; /* Font size for heading */
+    color: cyan; /* Cyan text */
+    margin-bottom: 20px; /* Margin below heading */
 }
 
 #contact p {
-    font-size: 1.2rem;
-    color: #e6e6e6;
-    max-width: 800px;
-    margin: 0 auto;
+    font-size: 1.2rem; /* Font size for paragraph */
+    color: #e6e6e6; /* Light grey text */
+    max-width: 800px; /* Max width for paragraph */
+    margin: 0 auto; /* Center text */
 }
 
 #contact a {
-    color: cyan;
-    text-decoration: none;
+    color: cyan; /* Cyan text for links */
+    text-decoration: none; /* Remove underline */
 }
 
 #contact a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Underline on hover */
 }
 
+/* Footer Section */
 footer {
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    text-align: center; /* Center text */
+    padding: 20px; /* Padding inside footer */
     position: relative;
     bottom: 0;
-    width: 100%;
+    width: 100%; /* Full width */
 }
 
 footer p {
-    margin: 5px 0;
+    margin: 5px 0; /* Margin above and below */
 }
