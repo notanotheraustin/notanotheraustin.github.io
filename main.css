@@ -32,8 +32,6 @@ body {
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
     height: 100vh; /* Full viewport height */
-    background: rgba(0, 0, 0, 0.07); /* Semi-transparent background */
-    backdrop-filter: blur(2px); /* Glass effect */
     color: #ffffff; /* White text */
     text-align: center; /* Center text */
     padding: 20px;
