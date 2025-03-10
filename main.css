@@ -12,6 +12,12 @@ body {
     /*overflow: hidden; /* Prevent overflow */
 }
 
+#header, #about, #projects, #contact {
+    background: none; /* Removes background */
+    backdrop-filter: none; /* Removes any blur effect */
+}
+
+
 /* Particle Background */
 #particles-js {
     position: fixed; /* Fix position on screen */
