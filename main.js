@@ -57,27 +57,32 @@ async function fetchGitHubRepos() {
 // Call function on page load
 fetchGitHubRepos();
 
+// Variables for glitch effect
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; // Characters for glitch effect
+let interval = null; // Variable to control the interval
+
 // Header text glitch effect on hover
 document.querySelector("h1").onmouseover = event => {  
     let iteration = 0;
-    clearInterval(interval);
-    
-    // Create the glitch effect on hover
+    clearInterval(interval); // Clear previous interval
+
+    // Start glitch effect
     interval = setInterval(() => {
         event.target.innerText = event.target.innerText
-            .split("")
+            .split("") // Split text into individual characters
             .map((letter, index) => {
                 if (index < iteration) {
                     return event.target.dataset.value[index]; // Keep original text
                 }
                 return letters[Math.floor(Math.random() * 26)]; // Randomize letters
             })
-            .join("");
-        
+            .join(""); // Rejoin characters into a string
+
+        // Stop the glitch effect when it finishes
         if (iteration >= event.target.dataset.value.length) { 
-            clearInterval(interval); // Stop glitch effect when done
+            clearInterval(interval);
         }
-        
+
         iteration += 1 / 3; // Slow down the glitch effect
-    }, 30);
+    }, 30); // Set interval for glitch speed
 };
