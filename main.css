@@ -9,7 +9,7 @@ body {
     background-color: black; /* Background color */
     margin: 0; /* Remove default margin */
     font-family: 'Orbitron', sans-serif; /* Set custom font */
-    overflow: hidden; /* Prevent overflow */
+    /*overflow: hidden; /* Prevent overflow */
 }
 
 /* Particle Background */
