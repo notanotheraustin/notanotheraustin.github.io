@@ -1,52 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>notanotherAustin</title>
-    <link rel="stylesheet" href="main.css">
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0"></script> <!-- Particle Library -->
+    <!-- Meta Tags and Viewport -->
+    <meta charset="UTF-8"> <!-- Character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- For responsive design -->
+    <title>notanotherAustin</title> <!-- Page Title -->
+
+    <!-- Linking Stylesheets -->
+    <link rel="stylesheet" href="main.css"> <!-- Main CSS file for styling -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0"></script> <!-- Particle.js library -->
 </head>
 <body>
     <!-- Particle Background -->
-    <div id="particles-js"></div>
+    <div id="particles-js"></div> <!-- Full-screen particle effect background -->
 
-    <!-- Header Section (Intro) -->
+    <!-- Header Section -->
     <section id="header">
         <div class="header-content">
-            <h1 data-value="notanotherAustin">notanotherAustin</h1>
-            <p>Welcome to my portfolio! Explore my work, skills, and projects.</p>
-            <a href="#projects" class="cta-button">See My Projects</a>
+            <h1 data-value="notanotherAustin">notanotherAustin</h1> <!-- Main header -->
+            <p>Welcome to my portfolio! Explore my work, skills, and projects.</p> <!-- Introductory text -->
+            <a href="#projects" class="cta-button">See My Projects</a> <!-- Button linking to the projects section -->
         </div>
     </section>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li> <!-- Link to About section -->
+            <li><a href="#projects">Projects</a></li> <!-- Link to Projects section -->
+            <li><a href="#contact">Contact</a></li> <!-- Link to Contact section -->
+        </ul>
+    </nav>
 
     <!-- About Section -->
     <section id="about">
         <div class="about-content">
-            <h2>About Me</h2>
-            <p>I'm a passionate game developer and web designer, working on exciting projects. With skills in Unity, coding, and UI/UX design, I bring digital worlds to life.</p>
+            <h2>About Me</h2> <!-- About section heading -->
+            <p>I'm a passionate game developer and web designer, working on exciting projects. With skills in Unity, coding, and UI/UX design, I bring digital worlds to life.</p> <!-- Description of yourself -->
         </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects">
-        <h2>My Repos</h2>
-        <div id="repo-container">Loading projects...</div>
+        <h2>My Repos</h2> <!-- Projects section heading -->
+        <div id="repo-container">Loading projects...</div> <!-- Container for dynamically loaded GitHub repositories -->
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Want to collaborate or have questions? Reach out via <a href="mailto:your-email@example.com">email</a>, or follow me on social media!</p>
+        <h2>Contact Me</h2> <!-- Contact section heading -->
+        <p>Want to collaborate or have questions? Reach out via <a href="mailto:your-email@example.com">email</a>, or follow me on social media!</p> <!-- Contact info -->
     </section>
 
-    <script src="main.js"></script>
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 notanotherAustin. All rights reserved.</p> <!-- Copyright notice -->
+        <p>Made with passion and caffeine.</p> <!-- Footer message -->
+    </footer>
 
-<footer>
-    <p>&copy; 2025 notanotherAustin. All rights reserved.</p>
-    <p>Made with passion and caffeine.</p>
-</footer>
-
+    <!-- Linking JavaScript file -->
+    <script src="main.js"></script> <!-- Main JS file for interactivity -->
 </body>
-
 </html>
