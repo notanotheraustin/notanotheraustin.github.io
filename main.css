@@ -1,5 +1,5 @@
 /* Cyberpunk Style */
-@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
 body {
     display: grid;
@@ -13,7 +13,7 @@ body {
 
 /* Particle Background */
 #particles-js {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     z-index: -1;
@@ -25,7 +25,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+    background: rgba(0, 0, 0, 0.07); /* Semi-transparent background */
     backdrop-filter: blur(2px); /* Glass blur effect */
     color: #ffffff;
     text-align: center;
@@ -55,6 +55,7 @@ body {
     color: cyan;
     text-shadow: 0 0 10px cyan, 0 0 30px blue;
     margin-bottom: 10px;
+    font-weight: 400; /* Ensure normal weight instead of bold */
 }
 
 #header p {
@@ -63,7 +64,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* Cyberpunk Outlined Button */
+/* Outlined Button */
 .cta-button {
     display: inline-block;
     padding: 15px 30px;
@@ -123,6 +124,11 @@ body {
     box-shadow: 0 0 15px cyan;
 }
 
+/* Ensure smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
 /* Projects Section */
 #projects {
     text-align: center;
@@ -139,20 +145,132 @@ body {
 }
 
 .repo-card {
-    background: rgba(0, 255, 255, 0.1);
+    position: relative;
+    background: rgba(0, 0, 0, 0.8);
     border: 2px solid cyan;
-    padding: 15px;
-    width: 300px;
-    border-radius: 8px;
-    transition: 0.3s;
+    padding: 20px;
+    width: 320px;
+    border-radius: 5px;
+    text-align: left;
+    color: #0ff;
+    font-family: 'Orbitron', sans-serif;
+    transition: 0.3s ease-in-out;
+    overflow: hidden;
+    box-shadow: 0 0 10px cyan;
+    animation: glitch-glow 0.8s infinite alternate ease-in-out;
+}
+
+/* Glitchy Glow Animation */
+@keyframes glitch-glow {
+    0% {
+        box-shadow: 0 0 10px cyan, 0 0 20px rgba(0, 255, 255, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 15px cyan, 0 0 30px rgba(0, 255, 255, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 10px cyan, 0 0 20px rgba(0, 255, 255, 0.5);
+    }
 }
 
 .repo-card:hover {
-    box-shadow: 0 0 15px cyan;
+    transform: translateY(-5px);
+    animation: glitch-glow-hover 0.2s infinite alternate ease-in-out;
 }
 
+@keyframes glitch-glow-hover {
+    0% {
+        box-shadow: 0 0 20px cyan, 0 0 40px rgba(0, 255, 255, 1);
+    }
+    100% {
+        box-shadow: 0 0 10px cyan, 0 0 20px rgba(0, 255, 255, 0.7);
+    }
+}
 
-/* Ensure smooth scrolling */
-html {
-    scroll-behavior: smooth;
+/* Title and Link */
+.repo-card h3 a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-size: 1.4rem;
+    transition: 0.3s;
+}
+
+.repo-card h3 a:hover {
+    color: cyan;
+    text-shadow: 0 0 10px cyan, 0 0 20px cyan;
+}
+
+/* Repo Description */
+.repo-card p {
+    font-size: 1rem;
+    color: #fff;
+    opacity: 0.8;
+    margin-top: 10px;
+}
+
+/* About Section */
+#about {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 50px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+#about h2 {
+    font-size: 2rem;
+    color: cyan;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1.2rem;
+    color: #e6e6e6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Contact Section */
+#contact {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 50px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+#contact h2 {
+    font-size: 2rem;
+    color: cyan;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 1.2rem;
+    color: #e6e6e6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#contact a {
+    color: cyan;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 5px 0;
 }
