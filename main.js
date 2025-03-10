@@ -1,6 +1,6 @@
 console.log("Particles.js is running!");
 
-// Initialize particles with attraction effect
+// Initialize particles effect
 particlesJS("particles-js", {
     particles: {
         number: { value: 100, density: { enable: true, value_area: 800 } },
@@ -32,10 +32,7 @@ particlesJS("particles-js", {
     }
 });
 
-// Cyberpunk Glitch Effect on Hover
-const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-let interval = null;
-
+// Fetch GitHub Repositories
 const GITHUB_USERNAME = "notanotheraustin"; 
 
 async function fetchGitHubRepos() {
@@ -43,8 +40,9 @@ async function fetchGitHubRepos() {
     const repos = await response.json();
 
     const repoContainer = document.getElementById("repo-container");
-    repoContainer.innerHTML = ""; // Clear loading text
+    repoContainer.innerHTML = ""; // Clear "loading" message
 
+    // Loop through each repo and display it
     repos.forEach(repo => {
         const repoElement = document.createElement("div");
         repoElement.classList.add("repo-card");
@@ -56,29 +54,30 @@ async function fetchGitHubRepos() {
     });
 }
 
-// Call the function on page load
+// Call function on page load
 fetchGitHubRepos();
 
-
+// Header text glitch effect on hover
 document.querySelector("h1").onmouseover = event => {  
     let iteration = 0;
     clearInterval(interval);
     
+    // Create the glitch effect on hover
     interval = setInterval(() => {
         event.target.innerText = event.target.innerText
             .split("")
             .map((letter, index) => {
                 if (index < iteration) {
-                    return event.target.dataset.value[index];
+                    return event.target.dataset.value[index]; // Keep original text
                 }
-                return letters[Math.floor(Math.random() * 26)];
+                return letters[Math.floor(Math.random() * 26)]; // Randomize letters
             })
             .join("");
         
         if (iteration >= event.target.dataset.value.length) { 
-            clearInterval(interval);
+            clearInterval(interval); // Stop glitch effect when done
         }
         
-        iteration += 1 / 3;
+        iteration += 1 / 3; // Slow down the glitch effect
     }, 30);
 };
